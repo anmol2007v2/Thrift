@@ -1,0 +1,8 @@
+{
+  "name": "thrift-monorepo-root",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix Backend install && npm --prefix Backend run build",
+    "start": "node Backend/dist/server.js"
+  }
+}

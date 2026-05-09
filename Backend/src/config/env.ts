@@ -1,7 +1,9 @@
 import { z } from 'zod';
 import dotenv from 'dotenv';
+import path from 'path';
 
-dotenv.config();
+// Always load Backend/.env regardless of current working directory.
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
