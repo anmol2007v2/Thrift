@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: thrift-backend
+    runtime: node
+    rootDir: Backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    autoDeploy: true
